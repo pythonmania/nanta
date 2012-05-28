@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+GET     /favicon.ico               controllers.Default.notFound
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# rdbms query
+GET     /:cmd                      controllers.Application.query(cmd)
